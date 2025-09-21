@@ -1,0 +1,108 @@
+:root {
+  color-scheme: light dark;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f1f5f9;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(160deg, #f9fafb 0%, #eef2ff 100%);
+  color: #0f172a;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+.container {
+  width: min(560px, 100%);
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+  padding: 32px;
+  backdrop-filter: blur(14px);
+}
+
+.panel__header h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.panel__header p {
+  margin: 0 0 24px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.form {
+  display: grid;
+  gap: 20px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field__label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 12px 14px;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(255, 255, 255, 0.95);
+  color: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(99, 102, 241, 0.55);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.field__hint {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.button {
+  border: none;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 12px 25px rgba(79, 70, 229, 0.25);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(79, 70, 229, 0.3);
+}
+
+.status {
+  min-height: 18px;
+  font-size: 13px;
+  color: #16a34a;
+}
+
+@media (max-width: 520px) {
+  .panel {
+    padding: 24px;
+  }
+}

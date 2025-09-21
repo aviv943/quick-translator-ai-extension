@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Translator AI · Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="container" role="main">
+      <section class="panel">
+        <header class="panel__header">
+          <h1>Quick Translator AI</h1>
+          <p>Connect your OpenAI account and choose how translations should appear.</p>
+        </header>
+        <form id="settings-form" class="form" autocomplete="off">
+          <label class="field">
+            <span class="field__label">OpenAI API key</span>
+            <input type="password" id="apiKey" name="apiKey" placeholder="sk-..." aria-describedby="apiHint" />
+            <small id="apiHint" class="field__hint">Your key is stored securely in your browser and never shared.</small>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Target language</span>
+            <input type="text" id="targetLanguage" name="targetLanguage" placeholder="e.g. English" required />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Reading direction</span>
+            <select id="direction" name="direction">
+              <option value="ltr">Left to right</option>
+              <option value="rtl">Right to left</option>
+            </select>
+          </label>
+
+          <button type="submit" class="button">Save settings</button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
